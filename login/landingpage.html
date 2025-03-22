@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        body{
+            font-family: verdana;
+            background: linear-gradient(to right, #e6d698, #f0c29a);
+            height: 100vh;
+            overflow-y: scroll;
+            margin: 0px;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid gray;
+        }
+        .header li{
+            list-style: none;
+            margin-left: 10px;
+            border: 1px solid linear-gradient(to right, #98e6b9, #f0c29a);;
+            border-radius: 5px;
+            padding:5px 5px;
+
+        }
+        .header ul{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-evenly
+        }
+        .logo{
+            display: flex;
+        }
+        .logo img{
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .logo p{
+            display: inline;
+            font-size: 20px;
+        }
+        .search-bar input{
+            flex: 1;
+            width: 250px;
+            height: 25px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        .intro{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .intro p{
+            font-size: 40px;
+        }
+        .intro button{
+            background-color: yellow;
+            border: 1px solid yellow;
+            height: 30px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .quick-start{
+            display: flex;
+            justify-content: space-between;
+        }
+        .quick-start-content{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid gray;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .quick-start-content button{
+            width: 100px;
+            background-color: rgb(27, 201, 27);
+            border: 1px solid rgb(27, 201, 27) ;
+            border-radius: 10px;
+            height: 30px;
+        }
+        .quick-start-content-title{
+            color: rgb(46, 65, 231);
+        }
+        .leaderboard-section-title,.categories-section-title, .featured-section-title{
+            font-size: 30px;
+        }
+        .categories{
+            display: flex;
+            justify-content:space-between;
+            padding: 10px;
+        }
+        .categories-content{
+            border: 1px solid gray;
+            padding: 10px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+        }
+        .leaderboard{
+            display: flex;
+            justify-content:space-between;
+            padding: 10px;
+        }
+        .leaderboard-content{
+            border: 1px solid gray;
+            padding: 10px;
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .leaderboard-content p{
+            margin: 0px;
+        }
+        @media (width>900px) {
+            body{
+                font-family: verdana;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            background: linear-gradient(to right, #e6d698, #f0c29a);
+            height: 100vh;
+            overflow: scroll;
+            margin: 0px;
+            }
+            .categories-section{
+                width: 1084px;
+            }
+            .leaderboard-section{
+                width: 1084px;
+            }
+        }
+        @media (width<570px){
+            .categories-section{
+                flex-wrap: wrap;
+                width: 570px;
+            }
+            .leaderboard-section{
+                flex-wrap: wrap;
+                width: 570px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="app-logo.png">
+            <p>Quizz</p>
+        </div>
+        <div class="search-bar">
+            <input type="text">
+        </div>
+        <div>
+        <ul>
+            <li>Home</li>
+            <li>Leaderboard</li>
+            <li>Profile</li>
+            <li>Sign in</li>
+        </ul>
+        </div>
+    </div>
+    <div class="intro">
+        <p>Test Your Knowledge?</p>
+        <div>
+        <button>Start Quiz</button>
+        </div>
+    </div>
+    <div class="featured-section">
+        <p class="featured-section-title">Featured Quizes</p>
+    <div class="quick-start">
+        <div class="quick-start-content">
+            <p class="quick-start-content-title">ADSJ Quiz</p>
+            <p>Test Your Knowledge in science</p>
+            <button>Start Quiz</button>
+        </div>
+        <div class="quick-start-content">
+            <p class="quick-start-content-title">Physics Quiz</p>
+            <p>Test Your Knowledge in Physics</p>
+            <button>Start Quiz</button>
+        </div>
+        <div class="quick-start-content">
+            <p class="quick-start-content-title">Maths Quiz</p>
+            <p>Test Your Knowledge in Maths</p>
+            <button>Start Quiz</button>
+        </div>
+        <div class="quick-start-content">
+            <p class="quick-start-content-title">IQ Quiz</p>
+            <p>Test Your Knowledge in General</p>
+            <button>Start Quiz</button>
+        </div>
+    </div>
+    </div>
+    <div class="categories-section">
+        <p class="categories-section-title">Categories</p>
+        <div class="categories">
+            <div class="categories-content">
+                <p>Maths</p>
+            </div>
+            <div class="categories-content">
+                <p>Programing</p>
+            </div>
+            <div class="categories-content">
+                <p>Chemistry</p>
+            </div>
+            <div class="categories-content">
+                <p>General</p>
+            </div>
+        </div>
+    </div>
+    <div class="leaderboard-section">
+        <p class="leaderboard-section-title">Leaderboards</p>
+        <div class="leaderboard">
+            <div class="leaderboard-content">
+                <p>Praneeth</p>
+                <p>Score: 100</p>
+            </div>
+            <div class="leaderboard-content">
+                <p>Raghu</p>
+                <p>Score: 100</p>
+            </div>
+            <div class="leaderboard-content">
+                <p>Sharma</p>
+                <p>Score: 100</p>
+            </div>
+            <div class="leaderboard-content">
+                <p>Charan</p>
+                <p>Score: 100</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
